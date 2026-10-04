@@ -42,7 +42,7 @@ pipeline {
         steps {
         // Stop and remove any existing container on this port
         sh 'docker stop jenkins-demo-manual || true'
-        sh 'docker rm
+        sh 'docker rm jenkins-demo-manual || true'
         jenkins-demo-manual || true'
         // Host port 8081 → container port 8081 (app listens on 8081)
         sh "docker run -d --name jenkins-demo-manual -p 8081:8081
